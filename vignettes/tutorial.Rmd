@@ -1,0 +1,41 @@
+---
+title: "Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Randomuseragent)
+```
+
+There are only two functions in this package: `filter_useragent` and `random_useragent`.
+They both accept same arguments to subset from all the useragent strings provided in this package.
+
+The most simple way of generating random UA string is:
+
+```{r}
+random_useragent()
+```
+
+Or we can choose the UA string used by Chrome browser on Windows machine:
+
+```{r}
+random_useragent(software_name = "Chrome", operating_system_name = "Windows")
+```
+
+Or we can choose Safari from macOS (or Mac OS X)
+
+```{r}
+random_useragent(software_name = "Safari", operating_system_name = "Mac OS X")
+random_useragent(software_name = "Safari", operating_system_name = "macOS")
+```

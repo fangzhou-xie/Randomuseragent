@@ -1,6 +1,6 @@
 Package: Randomuseragent
 Type: Package
-Title: Randomly Sampling Real User-Agent Strings
+Title: Filtering and Randomly Sampling Real User-Agent Strings
 Version: 0.0.1
 Authors@R: 
     person(given = "Fangzhou",
