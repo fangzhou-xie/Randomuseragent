@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-06-16T02:01Z
+last_built: 2021-06-16T02:02Z
 urls:
   reference: https://fangzhou-xie.github.io/Randomuseragent/reference
   article: https://fangzhou-xie.github.io/Randomuseragent/articles
