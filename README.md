@@ -5,7 +5,9 @@
 
 <!-- badges: start -->
 
-[![](https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg)](https://github.com/fangzhou-xie/Randomuseragent/commits/master)
+    #> ✓ Setting active project to '/home/xiefangzhou/workspace/gitfolder/Randomuseragent'
+
+[![](https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg)](https://github.com/fangzhou-xie/Randomuseragent/commits/main)
 [![Build
 Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
 [![License:
@@ -28,6 +30,8 @@ The development version can be installed from
 ``` r
 # install.packages("devtools")
 devtools::install_github("fangzhou-xie/Randomuseragent")
+#> Skipping install of 'Randomuseragent' from a github remote, the SHA1 (6ab24a1a) has not changed since last install.
+#>   Use `force = TRUE` to force installation
 ```
 
 The package is currently under active development and will be submitted
@@ -41,7 +45,7 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-#> [1] "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322; .NET4.0C)"
+#> [1] "Mozilla/5.0 (Windows NT 6.3; Win64; x64; Trident/7.0; Touch; MASMJS; rv:11.0) like Gecko"
 
 filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "macOS")
 #> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5"
