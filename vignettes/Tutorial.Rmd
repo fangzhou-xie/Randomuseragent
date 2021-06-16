@@ -2,7 +2,7 @@
 title: "Tutorial"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{tutorial}
+  %\VignetteIndexEntry{Tutorial}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -33,9 +33,8 @@ Or we can choose the UA string used by Chrome browser on Windows machine:
 random_useragent(software_name = "Chrome", operating_system_name = "Windows")
 ```
 
-Or we can choose Safari from macOS (or Mac OS X)
+Or we can choose Safari from Mac OS X:
 
 ```{r}
 random_useragent(software_name = "Safari", operating_system_name = "Mac OS X")
-random_useragent(software_name = "Safari", operating_system_name = "macOS")
 ```

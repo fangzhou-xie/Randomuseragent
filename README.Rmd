@@ -61,7 +61,7 @@ library(Randomuseragent)
 
 random_useragent()
 
-filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "macOS")
+filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
 ```
 
 Both function will accept the same set of arguments for filtering user-agent strings. Please refer

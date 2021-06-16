@@ -30,7 +30,7 @@ The development version can be installed from
 ``` r
 # install.packages("devtools")
 devtools::install_github("fangzhou-xie/Randomuseragent")
-#> Skipping install of 'Randomuseragent' from a github remote, the SHA1 (6ab24a1a) has not changed since last install.
+#> Skipping install of 'Randomuseragent' from a github remote, the SHA1 (d20a430d) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 
@@ -45,14 +45,16 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-#> [1] "Mozilla/5.0 (Windows NT 6.3; Win64; x64; Trident/7.0; Touch; MASMJS; rv:11.0) like Gecko"
+#> [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36"
 
-filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "macOS")
-#> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5"
-#> [2] "Spillo/95 CFNetwork/720.5.7 Darwin/14.5.0 (x86_64)"                                                                
-#> [3] "Safari/6534.59.10 CFNetwork/454.12.4 Darwin/10.8.0 (i386) (MacBook2,1)"                                            
-#> [4] "CloudyTabs/1.6 CFNetwork/720.3.13 Darwin/14.3.0 (x86_64)"                                                          
-#> [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/602.1.2 (KHTML, like Gecko) Version/9.1 Safari/602.1.2"
+filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
+#> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   
+#> [2] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.10"
+#> [3] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2"  
+#> [4] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"   
+#> [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17" 
+#> [6] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/6.2.8 Safari/537.85.17"  
+#> [7] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"
 ```
 
 Both function will accept the same set of arguments for filtering
