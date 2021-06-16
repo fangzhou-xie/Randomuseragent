@@ -8,8 +8,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "fangzhou.xie@rutgers.edu",
            comment = c(ORCID = "https://orcid.org/0000-0001-7702-093X"))
-Description: Based on real user-agent strings from whatismybrowser.com, we can set filtering conditions
-    and randomly sample user-agent strings from the pool.
+Description: Based on data of real user-agent strings, we can set filtering conditions
+    and randomly sample user-agent strings from the user-agent string pool.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: 
