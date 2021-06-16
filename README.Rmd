@@ -22,9 +22,9 @@ library(badger)
 <!-- badges: start -->
 ```{r, echo = FALSE, results = "asis"}
 cat(
-  badge_cran_release("Randomuseragent", "green"),
-  badge_cran_download("Randomuseragent", "grand-total", "green"),
-  badge_cran_checks("Randomuseragent"),
+  # badge_cran_release("Randomuseragent", "green"),
+  # badge_cran_download("Randomuseragent", "grand-total", "green"),
+  # badge_cran_checks("Randomuseragent"),
   badge_last_commit("fangzhou-xie/Randomuseragent")
 )
 ```
