@@ -46,6 +46,18 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/Tutorial.html">Tutorial</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="news/index.html">Changelog</a>
 </li>
@@ -87,7 +99,7 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fangzhou-xie/Randomuseragent"</span><span class="op">)</span>
-<span class="co">#&gt; Skipping install of 'Randomuseragent' from a github remote, the SHA1 (6ab24a1a) has not changed since last install.</span>
+<span class="co">#&gt; Skipping install of 'Randomuseragent' from a github remote, the SHA1 (d20a430d) has not changed since last install.</span>
 <span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
 <p>The package is currently under active development and will be submitted to CRAN soon.</p>
 </div>
@@ -99,14 +111,16 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fangzhou-xie/Randomuseragent">Randomuseragent</a></span><span class="op">)</span>
 
 <span class="fu"><a href="reference/random_useragent.html">random_useragent</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Mozilla/5.0 (Windows NT 6.3; Win64; x64; Trident/7.0; Touch; MASMJS; rv:11.0) like Gecko"</span>
+<span class="co">#&gt; [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36"</span>
 
-<span class="fu"><a href="reference/filter_useragent.html">filter_useragent</a></span><span class="op">(</span>min_obs <span class="op">=</span> <span class="fl">50000</span>, software_name <span class="op">=</span> <span class="st">"Safari"</span>, operating_system_name <span class="op">=</span> <span class="st">"macOS"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5"</span>
-<span class="co">#&gt; [2] "Spillo/95 CFNetwork/720.5.7 Darwin/14.5.0 (x86_64)"                                                                </span>
-<span class="co">#&gt; [3] "Safari/6534.59.10 CFNetwork/454.12.4 Darwin/10.8.0 (i386) (MacBook2,1)"                                            </span>
-<span class="co">#&gt; [4] "CloudyTabs/1.6 CFNetwork/720.3.13 Darwin/14.3.0 (x86_64)"                                                          </span>
-<span class="co">#&gt; [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/602.1.2 (KHTML, like Gecko) Version/9.1 Safari/602.1.2"</span></code></pre></div>
+<span class="fu"><a href="reference/filter_useragent.html">filter_useragent</a></span><span class="op">(</span>min_obs <span class="op">=</span> <span class="fl">50000</span>, software_name <span class="op">=</span> <span class="st">"Safari"</span>, operating_system_name <span class="op">=</span> <span class="st">"Mac OS X"</span><span class="op">)</span>
+<span class="co">#&gt; [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   </span>
+<span class="co">#&gt; [2] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.10"</span>
+<span class="co">#&gt; [3] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2"  </span>
+<span class="co">#&gt; [4] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"   </span>
+<span class="co">#&gt; [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17" </span>
+<span class="co">#&gt; [6] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/6.2.8 Safari/537.85.17"  </span>
+<span class="co">#&gt; [7] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"</span></code></pre></div>
 <p>Both function will accept the same set of arguments for filtering user-agent strings. Please refer to documentation of either function for details.</p>
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
 <!-- ```{r cars} -->
