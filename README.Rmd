@@ -28,7 +28,7 @@ cat(
   badge_last_commit("fangzhou-xie/Randomuseragent")
 )
 ```
-[![Build Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/Randomuseragent)
+[![Build Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 

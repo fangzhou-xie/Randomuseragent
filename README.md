@@ -11,7 +11,7 @@
 checks](https://cranchecks.info/badges/summary/Randomuseragent)](https://cran.r-project.org/web/checks/check_results_Randomuseragent.html)
 [![](https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg)](https://github.com/fangzhou-xie/Randomuseragent/commits/master)
 [![Build
-Status](https://travis-ci.org/fangzhou-xie/xutils.svg?branch=main)](https://travis-ci.org/fangzhou-xie/Randomuseragent)
+Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
@@ -45,7 +45,7 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-#> [1] "Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0"
+#> [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36"
 ```
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
