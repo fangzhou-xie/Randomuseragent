@@ -51,19 +51,20 @@ filter_useragent <- function(
 ) {
 
   # filters <- list(software_name = "Chrome", software_type = "browser", operating_system_name = "Windows")
-  uas <- useragents[useragents$times_seen >= min_obs,]
+  uas <- useragents[which(useragents$times_seen >= min_obs),]
 
   if (!is.null(software_name)) {
-    uas <- useragents[useragents$software_name %in% software_name,]
+    uas <- uas[which((uas$software_name %in% software_name) & (!is.na(uas$software_name))),]
   }
   if (!is.null(software_type)) {
-    uas <- useragents[useragents$software_type %in% software_type,]
+    uas <- uas[which((uas$software_type %in% software_type) & (!is.na(uas$software_type))),]
   }
   if (!is.null(operating_system_name)) {
-    uas <- useragents[useragents$operating_system_name %in% operating_system_name,]
+    uas <- uas[which((uas$operating_system_name %in% operating_system_name) & (!is.na(uas$operating_system_name))),]
   }
   if (!is.null(layout_engine_name)) {
-    uas <- useragents[useragents$layout_engine_name %in% layout_engine_name,]
+    uas <- uas[which((uas$layout_engine_name %in% layout_engine_name) & (!is.na(uas$layout_engine_name))),]
   }
+  assertthat::assert_that(nrow(uas) != 0, msg = "No useragent string selected! Consider other combinations!")
   uas$user_agent
 }
