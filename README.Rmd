@@ -20,7 +20,7 @@ library(badger)
 ```
 
 <!-- badges: start -->
-```{r, echo = FALSE, results = "asis"}
+```{r, echo = FALSE, results = "asis", message = FALSE}
 cat(
   # badge_cran_release("Randomuseragent", "green"),
   # badge_cran_download("Randomuseragent", "grand-total", "green"),

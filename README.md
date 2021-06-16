@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-    #> ✓ Setting active project to '/home/xiefangzhou/workspace/gitfolder/Randomuseragent'
-
 [![](https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg)](https://github.com/fangzhou-xie/Randomuseragent/commits/main)
 [![Build
 Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
@@ -30,7 +28,7 @@ The development version can be installed from
 ``` r
 # install.packages("devtools")
 devtools::install_github("fangzhou-xie/Randomuseragent")
-#> Skipping install of 'Randomuseragent' from a github remote, the SHA1 (d20a430d) has not changed since last install.
+#> Skipping install of 'Randomuseragent' from a github remote, the SHA1 (002aee0b) has not changed since last install.
 #>   Use `force = TRUE` to force installation
 ```
 
@@ -45,7 +43,7 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-#> [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36"
+#> [1] "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; MDDRJS; rv:11.0) like Gecko"
 
 filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
 #> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   
