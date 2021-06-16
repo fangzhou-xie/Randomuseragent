@@ -38,8 +38,8 @@ random_useragent <- function(
 #' @examples
 #' filter_useragent(
 #'   min_obs = 500000,
-#'   software_name = "Safari",
-#'   operating_system_name = "macOS"
+#'   software_name = "Chrome",
+#'   operating_system_name = "Linux"
 #' )
 #' @export
 filter_useragent <- function(
@@ -65,6 +65,8 @@ filter_useragent <- function(
   if (!is.null(layout_engine_name)) {
     uas <- uas[which((uas$layout_engine_name %in% layout_engine_name) & (!is.na(uas$layout_engine_name))),]
   }
-  assertthat::assert_that(nrow(uas) != 0, msg = "No useragent string selected! Consider other combinations!")
+  if (nrow(uas) == 0) {
+    stop("No useragent string selected! Consider other combinations!")
+  }
   uas$user_agent
 }
