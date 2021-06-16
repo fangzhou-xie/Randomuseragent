@@ -2,7 +2,7 @@
 % Please edit documentation in R/random_useragent.R
 \name{random_useragent}
 \alias{random_useragent}
-\title{Randomly choosing an user-agent string}
+\title{randomly choosing an user-agent string, given a set of conditions}
 \usage{
 random_useragent(
   min_obs = 5000,
@@ -27,7 +27,7 @@ random_useragent(
 a random user agent string, given filter conditions
 }
 \description{
-Randomly choosing an user-agent string
+randomly choosing an user-agent string, given a set of conditions
 }
 \examples{
 random_useragent()
