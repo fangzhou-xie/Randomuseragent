@@ -8,6 +8,7 @@
 #' @return a random user agent string, given filter conditions
 #' @examples
 #' random_useragent()
+#' @export
 random_useragent <- function(
   min_obs = 5000,
   software_name = NULL,
