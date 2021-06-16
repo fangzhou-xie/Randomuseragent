@@ -1,7 +1,7 @@
 Package: Randomuseragent
 Type: Package
 Title: Randomly Shuffle User-Agent Strings
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Fangzhou",
            family = "Xie",
