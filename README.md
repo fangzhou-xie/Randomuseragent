@@ -44,7 +44,8 @@ This is a basic example to get random user-agent strings:
 ``` r
 library(Randomuseragent)
 
-# Randomuseragent::random_useragent()
+random_useragent()
+#> [1] "Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0"
 ```
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
