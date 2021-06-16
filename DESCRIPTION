@@ -1,21 +1,21 @@
 Package: Randomuseragent
 Type: Package
-Title: Randomly Shuffle User-Agent Strings
-Version: 0.0.2
+Title: Randomly Sampling Real User-Agent Strings
+Version: 0.0.1
 Authors@R: 
     person(given = "Fangzhou",
            family = "Xie",
            role = c("aut", "cre"),
            email = "fangzhou.xie@rutgers.edu",
            comment = c(ORCID = "https://orcid.org/0000-0001-7702-093X"))
-Description: This package could randomly generate real user-agent strings.
+Description: Based on real user-agent strings from whatismybrowser.com, we can set filtering conditions
+    and randomly sample user-agent strings from the pool.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: 
     R (>= 3.5)
-Imports:
-    dplyr (>= 1.0.0)
 Suggests: 
+    dplyr,
     knitr,
     markdown,
     rmarkdown

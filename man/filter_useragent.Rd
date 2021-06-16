@@ -32,7 +32,7 @@ filter useragents based on criteria
 \examples{
 filter_useragent(
   min_obs = 500000,
-  software_name = "Chrome",
-  operating_system_name = "Linux"
+  software_name = "Safari",
+  operating_system_name = "macOS"
 )
 }

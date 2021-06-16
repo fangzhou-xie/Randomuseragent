@@ -45,8 +45,19 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-#> [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36"
+#> [1] "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; MathPlayer 2.20; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)"
+
+filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "macOS")
+#> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5"
+#> [2] "Spillo/95 CFNetwork/720.5.7 Darwin/14.5.0 (x86_64)"                                                                
+#> [3] "Safari/6534.59.10 CFNetwork/454.12.4 Darwin/10.8.0 (i386) (MacBook2,1)"                                            
+#> [4] "CloudyTabs/1.6 CFNetwork/720.3.13 Darwin/14.3.0 (x86_64)"                                                          
+#> [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/602.1.2 (KHTML, like Gecko) Version/9.1 Safari/602.1.2"
 ```
+
+Both function will accept the same set of arguments for filtering
+user-agent strings. Please refer to documentation of either function for
+details.
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
 <!-- ```{r cars} -->

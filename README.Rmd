@@ -60,7 +60,12 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
+
+filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "macOS")
 ```
+
+Both function will accept the same set of arguments for filtering user-agent strings. Please refer
+to documentation of either function for details.
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
 
