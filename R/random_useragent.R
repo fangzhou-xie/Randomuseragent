@@ -41,6 +41,7 @@ random_useragent <- function(
 #'   software_name = "Chrome",
 #'   operating_system_name = "Linux"
 #' )
+#' @export
 filter_useragent <- function(
   min_obs = 0,
   software_name = NULL,
@@ -50,19 +51,19 @@ filter_useragent <- function(
 ) {
 
   # filters <- list(software_name = "Chrome", software_type = "browser", operating_system_name = "Windows")
-  uas <- dplyr::filter(useragents, times_seen >= min_obs)
+  uas <- useragents[useragents$times_seen >= min_obs,]
 
   if (!is.null(software_name)) {
-    uas <- dplyr::filter(uas, software_name %in% !!software_name)
+    uas <- useragents[useragents$software_name %in% software_name,]
   }
   if (!is.null(software_type)) {
-    uas <- dplyr::filter(uas, software_type %in% !!software_type)
+    uas <- useragents[useragents$software_type %in% software_type,]
   }
   if (!is.null(operating_system_name)) {
-    uas <- dplyr::filter(uas, operating_system_name %in% !!operating_system_name)
+    uas <- useragents[useragents$operating_system_name %in% operating_system_name,]
   }
   if (!is.null(layout_engine_name)) {
-    uas <- dplyr::filter(uas, layout_engine_name %in% !!layout_engine_name)
+    uas <- useragents[useragents$layout_engine_name %in% layout_engine_name,]
   }
-  dplyr::pull(uas, user_agent)
+  uas$user_agent
 }

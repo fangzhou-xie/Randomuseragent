@@ -12,7 +12,14 @@ Description: This package could randomly generate real user-agent strings.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5)
+Imports:
+    dplyr (>= 1.0.0)
+Suggests: 
+    knitr,
+    markdown,
+    rmarkdown
+VignetteBuilder: knitr
 URL: https://github.com/fangzhou-xie/Randomuseragent, https://fangzhou-xie.github.io/Randomuseragent/index.html
 BugReports: https://github.com/fangzhou-xie/randomuseragent/issues
 RoxygenNote: 7.1.1
