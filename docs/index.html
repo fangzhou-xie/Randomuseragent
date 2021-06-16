@@ -85,7 +85,6 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#randomuseragent" class="anchor"></a>Randomuseragent</h1></div>
 <!-- badges: start -->
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✓ Setting active project to '/home/xiefangzhou/workspace/gitfolder/Randomuseragent'</span></span></code></pre></div>
 
 <p>The goal of Randomuseragent is to have a easy access to different user-agent strings by randomly sampling from a pool of real strings.</p>
 <div id="installation" class="section level2">
@@ -96,10 +95,10 @@
 <!-- install.packages("Randomuseragent") -->
 <!-- ``` -->
 <p>The development version can be installed from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"fangzhou-xie/Randomuseragent"</span><span class="op">)</span>
-<span class="co">#&gt; Skipping install of 'Randomuseragent' from a github remote, the SHA1 (d20a430d) has not changed since last install.</span>
+<span class="co">#&gt; Skipping install of 'Randomuseragent' from a github remote, the SHA1 (002aee0b) has not changed since last install.</span>
 <span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
 <p>The package is currently under active development and will be submitted to CRAN soon.</p>
 </div>
@@ -107,11 +106,11 @@
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example to get random user-agent strings:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fangzhou-xie/Randomuseragent">Randomuseragent</a></span><span class="op">)</span>
 
 <span class="fu"><a href="reference/random_useragent.html">random_useragent</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36"</span>
+<span class="co">#&gt; [1] "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; MDDRJS; rv:11.0) like Gecko"</span>
 
 <span class="fu"><a href="reference/filter_useragent.html">filter_useragent</a></span><span class="op">(</span>min_obs <span class="op">=</span> <span class="fl">50000</span>, software_name <span class="op">=</span> <span class="st">"Safari"</span>, operating_system_name <span class="op">=</span> <span class="st">"Mac OS X"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   </span>
