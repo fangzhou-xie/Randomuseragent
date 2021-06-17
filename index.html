@@ -90,47 +90,79 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<!-- You can install the released version of Randomuseragent from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("Randomuseragent") -->
-<!-- ``` -->
-<p>The development version can be installed from <a href="https://github.com/">GitHub</a> with:</p>
+<p>You can install the released version of Randomuseragent from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"Randomuseragent"</span><span class="op">)</span></code></pre></div>
+<p>The development version can be installed from <a href="https://github.com/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fangzhou-xie/Randomuseragent"</span><span class="op">)</span>
-<span class="co">#&gt; Skipping install of 'Randomuseragent' from a github remote, the SHA1 (002aee0b) has not changed since last install.</span>
-<span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
-<p>The package is currently under active development and will be submitted to CRAN soon.</p>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fangzhou-xie/Randomuseragent"</span><span class="op">)</span></code></pre></div>
+<!-- The package is currently under active development and will be submitted to CRAN soon.s -->
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example to get random user-agent strings:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fangzhou-xie/Randomuseragent">Randomuseragent</a></span><span class="op">)</span>
-
-<span class="fu"><a href="reference/random_useragent.html">random_useragent</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; MDDRJS; rv:11.0) like Gecko"</span>
-
-<span class="fu"><a href="reference/filter_useragent.html">filter_useragent</a></span><span class="op">(</span>min_obs <span class="op">=</span> <span class="fl">50000</span>, software_name <span class="op">=</span> <span class="st">"Safari"</span>, operating_system_name <span class="op">=</span> <span class="st">"Mac OS X"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   </span>
-<span class="co">#&gt; [2] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.10"</span>
-<span class="co">#&gt; [3] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2"  </span>
-<span class="co">#&gt; [4] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"   </span>
-<span class="co">#&gt; [5] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17" </span>
-<span class="co">#&gt; [6] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/6.2.8 Safari/537.85.17"  </span>
-<span class="co">#&gt; [7] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(Randomuseragent)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="kw">random_useragent</span>()</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36"</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="kw">filter_useragent</span>(<span class="dt">min_obs =</span> <span class="dv">50000</span>, <span class="dt">software_name =</span> <span class="st">"Safari"</span>, <span class="dt">operating_system_name =</span> <span class="st">"Mac OS X"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"</span>   </span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">2</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.10"</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">3</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2"</span>  </span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">4</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"</span>   </span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">5</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"</span> </span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">6</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/6.2.8 Safari/537.85.17"</span>  </span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">7</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"</span></span></code></pre></div>
 <p>Both function will accept the same set of arguments for filtering user-agent strings. Please refer to documentation of either function for details.</p>
-<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
-<!-- ```{r cars} -->
-<!-- summary(cars) -->
-<!-- ``` -->
-<!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. -->
-<!-- You can also embed plots, for example: -->
-<!-- ```{r pressure, echo = FALSE} -->
-<!-- plot(pressure) -->
-<!-- ``` -->
-<!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
+</div>
+<div id="advanced-example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#advanced-example" class="anchor"></a>Advanced Example</h2>
+<p>Although calling <code><a href="reference/random_useragent.html">random_useragent()</a></code> is very convenient, but this may not be the best way if you care about performance. <code><a href="reference/random_useragent.html">random_useragent()</a></code> essentially wraps up the <code><a href="reference/filter_useragent.html">filter_useragent()</a></code> function and return a random one from the pool. <!-- This is great if you just want to get a random UA string. --></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># call directly</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">random_useragent</span>(<span class="dt">min_obs =</span> <span class="dv">50000</span>, <span class="dt">software_name =</span> <span class="st">"Safari"</span>, <span class="dt">operating_system_name =</span> <span class="st">"Mac OS X"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"</span></span></code></pre></div>
+<p>However, if you need to generate <strong>LOTS OF</strong> them, i.e. calling <code><a href="reference/random_useragent.html">random_useragent()</a></code> repeatedly, each time you call <code><a href="reference/random_useragent.html">random_useragent()</a></code> you need first to filter from all the strings that this package provides, and then randomly draw one from the pool. Hence, you are doing the subsetting each time you call the function. This is very inefficient.</p>
+<p>A better way would be to get the string pool directly from <code><a href="reference/filter_useragent.html">filter_useragent()</a></code> and then sampling yourself.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># first filter</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>uas &lt;-<span class="st"> </span><span class="kw">filter_useragent</span>(<span class="dt">min_obs =</span> <span class="dv">50000</span>, <span class="dt">software_name =</span> <span class="st">"Safari"</span>, <span class="dt">operating_system_name =</span> <span class="st">"Mac OS X"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># then sample manually</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="kw">sample</span>(uas, <span class="dv">1</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="op">&gt;</span><span class="st"> </span>[<span class="dv">1</span>] <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"</span></span></code></pre></div>
+<p>To note this difference, we need to time the following code chunks.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># first to call random_useragent() directly</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">system.time</span>(<span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5000</span>, <span class="cf">function</span>(x){<span class="kw">random_useragent</span>()}))</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="op">&gt;</span><span class="st">    </span>user  system elapsed </span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="op">&gt;</span><span class="st">   </span><span class="fl">1.245</span>   <span class="fl">0.010</span>   <span class="fl">1.260</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># second generate the character vector and sampling manually</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">system.time</span>({</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  ua &lt;-<span class="st"> </span><span class="kw">filter_useragent</span>(<span class="dt">min_obs =</span> <span class="dv">5000</span>, <span class="dt">software_type =</span> <span class="st">"browser"</span>, <span class="dt">operating_system_name =</span> <span class="st">"Windows"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5000</span>, <span class="cf">function</span>(x) {<span class="kw">sample</span>(ua, <span class="dv">1</span>)})</span>
+<span id="cb7-5"><a href="#cb7-5"></a>})</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="op">&gt;</span><span class="st">    </span>user  system elapsed </span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="op">&gt;</span><span class="st">   </span><span class="fl">0.021</span>   <span class="fl">0.000</span>   <span class="fl">0.021</span></span></code></pre></div>
+<p>We run each method 5000 times to make a fair comparison between methods. You should immediately see that the second method is more than 50 times faster than the first one! That said, the first method only spends 0.2452 ms per call, on average, which is pretty fast already. The second method needs 4.4 ns per call. This is certainly faster, but for most use cases, I don’t think it worth going this far.</p>
+</div>
+<div id="optional-parameters" class="section level2">
+<h2 class="hasAnchor">
+<a href="#optional-parameters" class="anchor"></a>Optional Parameters</h2>
+<p>You can type <code><a href="reference/random_useragent.html">?random_useragent</a></code> to see the documentation for the parameters.</p>
+<ol>
+<li>
+<code>min_obs</code>: integer, threshold to filter number of times observed in the dataset. This is to keep the most frequently used UAs while removing the less frequently used ones. Larger number of this argument will result in less returned strings. Hence smaller set to be sampled from.</li>
+<li>
+<code>software_name</code>: character vector, name of the software. For example, you can choose to only use <code>software_name="Chrome"</code> or several platforms together <code>software_name = c("Safari", "Edge")</code>.</li>
+<li>
+<code>software_type</code>: character vector, one or more of <code>"browser", "bot", "application"</code>. For webscraping applications, you would most likely choose <code>software_type="browser"</code> to mimic real browser behavior.</li>
+<li>
+<code>operating_system_name</code>: character vector, system being operated. For example, use one or more of <code>"Windows", "Linux", "Mac OS X", "macOS", etc</code>.</li>
+<li>
+<code>layout_engine_name</code>: character vector, e.g. <code>"Gecko", "Blink", etc</code>.</li>
+</ol>
+<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: --><!-- ```{r cars} --><!-- summary(cars) --><!-- ``` --><!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>. --><!-- You can also embed plots, for example: --><!-- ```{r pressure, echo = FALSE} --><!-- plot(pressure) --><!-- ``` --><!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
 </div>
 </div>
   </div>
@@ -139,6 +171,8 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=Randomuseragent">https://​cloud.r-project.org/​package=Randomuseragent</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/fangzhou-xie/randomuseragent/">https://​github.com/​fangzhou-xie/​randomuseragent/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/fangzhou-xie/randomuseragent/issues">https://​github.com/​fangzhou-xie/​randomuseragent/​issues</a>
@@ -163,6 +197,9 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=Randomuseragent"><img src="https://www.r-pkg.org/badges/version/Randomuseragent?color=green"></a></li>
+<li><a href="https://cran.r-project.org/package=Randomuseragent"><img src="http://cranlogs.r-pkg.org/badges/grand-total/Randomuseragent?color=green"></a></li>
+<li><a href="https://cran.r-project.org/web/checks/check_results_Randomuseragent.html"><img src="https://cranchecks.info/badges/summary/Randomuseragent" alt="CRAN checks"></a></li>
 <li><a href="https://github.com/fangzhou-xie/Randomuseragent/commits/main"><img src="https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg"></a></li>
 <li><a href="https://travis-ci.com/github/fangzhou-xie/Randomuseragent"><img src="https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main" alt="Build Status"></a></li>
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></li>
