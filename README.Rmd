@@ -15,20 +15,10 @@ knitr::opts_chunk$set(
 
 # Randomuseragent
 
-```{r echo = FALSE, results = "hide", message = FALSE}
-library(badger)
-```
-
 <!-- badges: start -->
-```{r, echo = FALSE, results = "asis", message = FALSE}
-cat(
-  badge_cran_release("Randomuseragent", "green"),
-  badge_cran_download("Randomuseragent", "grand-total", "green"),
-  badge_cran_checks("Randomuseragent"),
-  badge_last_commit("fangzhou-xie/Randomuseragent")
-)
-```
-[![Build Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/Randomuseragent)](https://CRAN.R-project.org/package=Randomuseragent)
+[![CRAN_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/Randomuseragent)](https://CRAN.R-project.org/package=Randomuseragent)
+[![R-CMD-check](https://github.com/fangzhou-xie/Randomuseragent/workflows/R-CMD-check/badge.svg)](https://github.com/fangzhou-xie/Randomuseragent/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 

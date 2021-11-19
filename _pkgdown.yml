@@ -1,9 +1,0 @@
-home:
-  title: An R package for Randomly Sampling User-Agent Strings
-  description: The package is to randomly sampling from real user-agent strings.
-
-template:
-  params:
-    bootswatch: flatly
-
-url: https://fangzhou-xie.github.io/Randomuseragent/index.html

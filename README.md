@@ -5,13 +5,9 @@
 
 <!-- badges: start -->
 
-[![](https://www.r-pkg.org/badges/version/Randomuseragent?color=green)](https://cran.r-project.org/package=Randomuseragent)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/Randomuseragent?color=green)](https://cran.r-project.org/package=Randomuseragent)
-[![CRAN
-checks](https://cranchecks.info/badges/summary/Randomuseragent)](https://cran.r-project.org/web/checks/check_results_Randomuseragent.html)
-[![](https://img.shields.io/github/last-commit/fangzhou-xie/Randomuseragent.svg)](https://github.com/fangzhou-xie/Randomuseragent/commits/main)
-[![Build
-Status](https://travis-ci.com/fangzhou-xie/Randomuseragent.svg?branch=main)](https://travis-ci.com/github/fangzhou-xie/Randomuseragent)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/Randomuseragent)](https://CRAN.R-project.org/package=Randomuseragent)
+[![CRAN_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/Randomuseragent)](https://CRAN.R-project.org/package=Randomuseragent)
+[![R-CMD-check](https://github.com/fangzhou-xie/Randomuseragent/workflows/R-CMD-check/badge.svg)](https://github.com/fangzhou-xie/Randomuseragent/actions)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
@@ -46,7 +42,7 @@ This is a basic example to get random user-agent strings:
 library(Randomuseragent)
 
 random_useragent()
-> [1] "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36"
+> [1] "Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0"
 
 filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
 > [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9"   
@@ -73,7 +69,7 @@ random one from the pool.
 ``` r
 # call directly
 random_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
-> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/E7FBAF"
+> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/6.2.8 Safari/537.85.17"
 ```
 
 However, if you need to generate **LOTS OF** them, i.e. calling
@@ -91,7 +87,7 @@ A better way would be to get the string pool directly from
 uas <- filter_useragent(min_obs = 50000, software_name = "Safari", operating_system_name = "Mac OS X")
 # then sample manually
 sample(uas, 1)
-> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/534.50.2 (KHTML, like Gecko) Version/5.0.6 Safari/533.22.3"
+> [1] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"
 ```
 
 To note this difference, we need to time the following code chunks.
@@ -100,7 +96,7 @@ To note this difference, we need to time the following code chunks.
 # first to call random_useragent() directly
 system.time(lapply(1:5000, function(x){random_useragent()}))
 >    user  system elapsed 
->   1.245   0.010   1.260
+>   1.922   0.015   1.944
 ```
 
 ``` r
@@ -110,7 +106,7 @@ system.time({
   lapply(1:5000, function(x) {sample(ua, 1)})
 })
 >    user  system elapsed 
->   0.021   0.000   0.021
+>   0.023   0.000   0.023
 ```
 
 We run each method 5000 times to make a fair comparison between methods.
